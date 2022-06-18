@@ -19,15 +19,12 @@ export function links() {
   return [{ rel: 'stylesheet', href: styles }];
 }
 
-const MOCKED_TITLE = 'immensus';
-
 export default function App() {
   return (
     <html lang="en">
       <head>
         <Meta />
         <Links />
-        <title title={MOCKED_TITLE} />
       </head>
       <body>
         <Outlet />
