@@ -1,6 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
-import styles from "./styles/app.css";
-
+import type { MetaFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -8,17 +6,20 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "@remix-run/react";
+} from '@remix-run/react';
+import styles from './styles/app.css';
 
 export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "New Remix App",
-  viewport: "width=device-width,initial-scale=1",
+  charset: 'utf-8',
+  title: 'New Remix App',
+  viewport: 'width=device-width,initial-scale=1',
 });
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: 'stylesheet', href: styles }];
 }
+
+const MOCKED_TITLE = 'immensus';
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <title title={MOCKED_TITLE} />
       </head>
       <body>
         <Outlet />
