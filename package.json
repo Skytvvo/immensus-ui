@@ -9,10 +9,10 @@
     "start": "remix-serve build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint ./app ./stories",
-    "lint:fix": "eslint ./app ./stories --fix --color",
-    "lint-styles": "stylelint ./app/**/*.css ./stories/**/*.css",
-    "lint-styles:fix": "stylelint ./app/**/*.css ./stories/**/*.css --fix"
+    "lint": "eslint ./app --ext .js,.tsx,.ts",
+    "lint:fix": "eslint ./app --fix --ext .js,.tsx,.ts --color",
+    "lint-styles": "stylelint ./app/**/*.css app/stories/**/*.css",
+    "lint-styles:fix": "stylelint ./app/**/*.css app/stories/**/*.css --fix"
   },
   "dependencies": {
     "@mui/material": "^5.8.4",
