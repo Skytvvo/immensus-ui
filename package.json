@@ -28,6 +28,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "@remix-run/dev": "^1.6.0",
     "@remix-run/eslint-config": "^1.6.0",
     "@storybook/addon-actions": "^6.5.9",
@@ -45,6 +47,8 @@
     "@typescript-eslint/parser": "^5.28.0",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
+    "commitlint-config-jira": "^1.6.4",
+    "commitlint-plugin-jira-rules": "^1.6.4",
     "concurrently": "^7.2.2",
     "cypress": "^10.1.0",
     "eslint": "^8.18.0",
