@@ -14,7 +14,8 @@
     "lint-styles": "stylelint ./app/**/*.css app/stories/**/*.css",
     "lint-styles:fix": "stylelint ./app/**/*.css app/stories/**/*.css --fix",
     "test": "jest --passWithNoTests",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@mui/material": "^5.8.4",
@@ -82,10 +83,6 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "npm run lint:fix",
-      "git add"
-    ],
-    "*.test.ts": [
-      "npm run test",
       "git add"
     ],
     "*.css": [
