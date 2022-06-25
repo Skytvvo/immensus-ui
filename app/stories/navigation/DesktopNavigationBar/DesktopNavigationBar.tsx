@@ -1,7 +1,8 @@
 import React from 'react';
 import type { FC } from 'react';
-import { AppBar, Grid, Toolbar, Typography } from '@mui/material';
+import { AppBar, Button, Grid, Toolbar, Typography } from '@mui/material';
 import { Link } from '@remix-run/react';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
 import NavigationSearch from '../NavigationSearch/NavigationSearch';
 import { LC_DNB } from './DesktopNavigationBar.const';
 
@@ -19,6 +20,11 @@ const DesktopNavigationBar: FC = () => {
           </Grid>
           <Grid item xs={4}>
             <NavigationSearch />
+          </Grid>
+          <Grid item xs={3}>
+            <Button startIcon={<AddCircleIcon />} variant="contained">
+              {LC_DNB.createNewPostButton}
+            </Button>
           </Grid>
         </Grid>
       </Toolbar>

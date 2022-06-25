@@ -10,4 +10,5 @@ export const desktopNavigationTheme = createTheme({
 
 export const LC_DNB = {
   logo: 'immensus',
+  createNewPostButton: 'Create new post',
 };
