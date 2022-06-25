@@ -16,7 +16,8 @@
       "@stories": [
         "./app/stories"
       ],
-      "@components": ["./app/components"]
+      "@components": ["./app/components"],
+      "@constants": ["./app/constants"]
     },
 
     "noEmit": true
