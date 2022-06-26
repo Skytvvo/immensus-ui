@@ -19,7 +19,7 @@ export function links() {
   return [{ rel: 'stylesheet', href: styles }];
 }
 
-export default function App() {
+const App = () => {
   return (
     <html lang="en">
       <head>
@@ -34,4 +34,6 @@ export default function App() {
       </body>
     </html>
   );
-}
+};
+
+export default App;
