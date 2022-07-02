@@ -13,6 +13,7 @@ const DesktopNavigationLink: FC<IDesktopNavigationLink> = (props) => {
         <div
           className={classNames(
             'inline-flex align-center justify-center p-1 border-2 border-transparent',
+            'transition [&>svg]:transition [&>svg]:hover:fill-fuchsia-700 hover:border-b-fuchsia-700',
             {
               'border-b-fuchsia-600 [&>svg]:fill-fuchsia-600': isActive,
             }
