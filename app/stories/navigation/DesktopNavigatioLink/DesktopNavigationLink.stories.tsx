@@ -8,7 +8,7 @@ const notActiveRoute = '/';
 
 const DesktopNavigationLinkStory: ComponentMeta<typeof DesktopNavigationLink> =
   {
-    title: 'Navigation/Links/Desktop',
+    title: 'Navigation/Components/Links/Desktop',
     component: DesktopNavigationLink,
     decorators: [withRouter],
     parameters: {
