@@ -1,0 +1,35 @@
+import React from 'react';
+import type { FC } from 'react';
+import { AppBar, Button, Grid, Toolbar, Typography } from '@mui/material';
+import { Link } from '@remix-run/react';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import NavigationSearch from '../NavigationSearch/NavigationSearch';
+import { LC_DNB } from './DesktopNavigationBar.const';
+
+const homePageRoute = '#';
+
+const DesktopNavigationBar: FC = () => {
+  return (
+    <AppBar position="static">
+      <Toolbar>
+        <Grid container>
+          <Grid item xs={2}>
+            <Typography variant="h6" align="center">
+              <Link to={homePageRoute}>{LC_DNB.logo}</Link>
+            </Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <NavigationSearch />
+          </Grid>
+          <Grid item xs={3}>
+            <Button startIcon={<AddCircleIcon />} variant="contained">
+              {LC_DNB.createNewPostButton}
+            </Button>
+          </Grid>
+        </Grid>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default DesktopNavigationBar;
