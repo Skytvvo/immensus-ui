@@ -6,9 +6,9 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import ExploreRoundedIcon from '@mui/icons-material/ExploreRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
-import NavigationSearch from '../NavigationSearch/NavigationSearch';
-import DesktopNavigationLink from '../DesktopNavigatioLink';
-import { navigationRoutes } from '../../../globals/collections/navigation.enum';
+import NavigationSearch from '../../NavigationSearch/NavigationSearch';
+import DesktopNavigationLink from '../../../wrappers/DesktopNavigatioLink';
+import { navigationRoutes } from '../../../../globals/collections/navigation.enum';
 import { LC_DNB } from './DesktopNavigationBar.const';
 
 const DesktopNavigationBar: FC = () => {
