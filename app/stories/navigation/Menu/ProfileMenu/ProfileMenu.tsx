@@ -1,37 +1,59 @@
 import type { FC } from 'react';
-import React from 'react';
-import { Avatar, Button, IconButton, Menu, MenuItem } from '@mui/material';
+import React, { useCallback, useState } from 'react';
+import {
+  Avatar,
+  Badge,
+  Button,
+  Divider,
+  IconButton,
+  Menu,
+  MenuItem,
+} from '@mui/material';
+import { LC_PM, listOptionSx, mockedMenuOptions } from './ProfileMenu.const';
 
 const ProfileMenu: FC = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [isNotificationsInvisible, setNotificationsInvisible] = useState(false);
 
   const open = Boolean(anchorEl);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
+    setNotificationsInvisible(true);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  const handleClickCallback = useCallback(handleClick, []);
+  const handleCloseCallback = useCallback(handleClose, []);
+
   return (
     <>
-      <IconButton onClick={handleClick}>
-        <Avatar />
+      <IconButton onClick={handleClickCallback}>
+        <Badge
+          color="secondary"
+          variant="dot"
+          invisible={isNotificationsInvisible}
+        >
+          <Avatar />
+        </Badge>
       </IconButton>
       <Menu
         id="profile-menu"
         anchorEl={anchorEl}
         open={open}
-        onClick={handleClose}
-        onClose={handleClose}
+        onClick={handleCloseCallback}
+        onClose={handleCloseCallback}
       >
-        <MenuItem>
-          <Avatar /> My profile
-        </MenuItem>
-        <MenuItem>Settings</MenuItem>
-        <Button>Sign out</Button>
+        {mockedMenuOptions.map((label) => (
+          <MenuItem sx={listOptionSx} key={label}>
+            {label}
+          </MenuItem>
+        ))}
+        <Divider />
+        <Button fullWidth>{LC_PM.SIGN_OUT}</Button>
       </Menu>
     </>
   );
