@@ -2,7 +2,7 @@ import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import ProfileMenu from './ProfileMenu';
 
 const ProfileMenuStory: ComponentMeta<typeof ProfileMenu> = {
-  title: 'Navigation/Components/ProfileMenu',
+  title: 'Menu/ProfileMenu',
   component: ProfileMenu,
 };
 

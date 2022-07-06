@@ -1,25 +1,18 @@
 import type { FC } from 'react';
-import React, { useCallback, useState } from 'react';
-import {
-  Avatar,
-  Badge,
-  Button,
-  Divider,
-  IconButton,
-  Menu,
-  MenuItem,
-} from '@mui/material';
-import { LC_PM, listOptionSx, mockedMenuOptions } from './ProfileMenu.const';
+import React, { useCallback } from 'react';
+import { Badge, IconButton, Menu } from '@mui/material';
 
-const ProfileMenu: FC = () => {
+import type { IMenuBar } from './MenuWrapper.type';
+
+const MenuWrapper: FC<IMenuBar> = (props) => {
+  const { isNotificationVisible, children, menuIcon } = props;
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [isNotificationsInvisible, setNotificationsInvisible] = useState(false);
 
   const open = Boolean(anchorEl);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
-    setNotificationsInvisible(true);
   };
 
   const handleClose = () => {
@@ -35,9 +28,9 @@ const ProfileMenu: FC = () => {
         <Badge
           color="secondary"
           variant="dot"
-          invisible={isNotificationsInvisible}
+          invisible={isNotificationVisible}
         >
-          <Avatar />
+          {menuIcon}
         </Badge>
       </IconButton>
       <Menu
@@ -47,16 +40,10 @@ const ProfileMenu: FC = () => {
         onClick={handleCloseCallback}
         onClose={handleCloseCallback}
       >
-        {mockedMenuOptions.map((label) => (
-          <MenuItem sx={listOptionSx} key={label}>
-            {label}
-          </MenuItem>
-        ))}
-        <Divider />
-        <Button fullWidth>{LC_PM.SIGN_OUT}</Button>
+        {children}
       </Menu>
     </>
   );
 };
 
-export default ProfileMenu;
+export default MenuWrapper;

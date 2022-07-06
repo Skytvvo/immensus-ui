@@ -2,8 +2,8 @@ import React from 'react';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
 import { ThemeProvider } from '@mui/material';
-import { NavigationSearchProvider } from '../NavigationSearch/NavigationSearch.const';
-import useMockedSearchStory from '../NavigationSearch/useMockedSearchStory';
+import { NavigationSearchProvider } from '../../NavigationSearch/NavigationSearch.const';
+import useMockedSearchStory from '../../NavigationSearch/useMockedSearchStory';
 import { desktopNavigationTheme } from './DesktopNavigationBar.const';
 import DesktopNavigationBar from './index.js';
 
