@@ -4,7 +4,7 @@ import { NavigationSearchProvider } from './NavigationSearch.const';
 import useMockedSearchStory from './useMockedSearchStory';
 
 const NavigationSearchStory: ComponentMeta<typeof NavigationSearch> = {
-  title: 'Navigation/Search',
+  title: 'Navigation/Components/Search',
   component: NavigationSearch,
 };
 

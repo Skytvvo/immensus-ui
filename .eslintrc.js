@@ -131,6 +131,8 @@ module.exports = {
         minimumDescriptionLength: 20,
       },
     ],
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
   },
   overrides: [
     {
