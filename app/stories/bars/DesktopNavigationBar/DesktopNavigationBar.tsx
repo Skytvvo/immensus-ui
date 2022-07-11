@@ -20,12 +20,17 @@ const DesktopNavigationBar: FC = () => {
         <Grid
           container
           direction="row"
-          justifyContent="space-between"
           alignItems="stretch"
           columnSpacing={3}
           wrap="nowrap"
         >
-          <Grid item xs container alignItems="center">
+          <Grid
+            item
+            xs={2}
+            container
+            justifyContent="flex-end"
+            alignItems="center"
+          >
             <Link to={navigationRoutes.HOME}>
               <Typography variant="h6" align="center">
                 {LC_DNB.logo}
@@ -35,17 +40,18 @@ const DesktopNavigationBar: FC = () => {
 
           <Grid
             item
-            xs={8}
+            xs={6}
+            columnSpacing={3}
             container
             className="p-2"
-            columnSpacing={3}
             wrap="nowrap"
+            justifyContent="space-between"
             alignItems="stretch"
           >
             <Grid item xs>
               <NavigationSearch />
             </Grid>
-            <Grid item xs>
+            <Grid item>
               <Button
                 startIcon={<AddCircleIcon />}
                 variant="contained"
@@ -56,25 +62,23 @@ const DesktopNavigationBar: FC = () => {
             </Grid>
           </Grid>
 
-          <Grid item xs={3} container alignItems="stretch" wrap="nowrap">
+          <Grid item xs={4} container alignItems="stretch" wrap="nowrap">
+            <DesktopNavigationLink route={navigationRoutes.HOME}>
+              <HomeRoundedIcon />
+            </DesktopNavigationLink>
+            <DesktopNavigationLink route={navigationRoutes.EXPLORE}>
+              <ExploreRoundedIcon />
+            </DesktopNavigationLink>
+            <DesktopNavigationLink route={navigationRoutes.DIRECT}>
+              <SendRoundedIcon />
+            </DesktopNavigationLink>
             <Grid
               item
               container
               direction="row"
-              alignItems="stretch"
+              alignItems="center"
               wrap="nowrap"
             >
-              <DesktopNavigationLink route={navigationRoutes.HOME}>
-                <HomeRoundedIcon />
-              </DesktopNavigationLink>
-              <DesktopNavigationLink route={navigationRoutes.EXPLORE}>
-                <ExploreRoundedIcon />
-              </DesktopNavigationLink>
-              <DesktopNavigationLink route={navigationRoutes.DIRECT}>
-                <SendRoundedIcon />
-              </DesktopNavigationLink>
-            </Grid>
-            <Grid item container direction="row" alignItems="center">
               <NotificationMenu />
               <ProfileMenu />
             </Grid>
