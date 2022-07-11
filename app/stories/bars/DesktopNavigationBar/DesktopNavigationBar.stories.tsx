@@ -2,13 +2,13 @@ import React from 'react';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
 import { ThemeProvider } from '@mui/material';
-import { NavigationSearchProvider } from '../../NavigationSearch/NavigationSearch.const';
-import useMockedSearchStory from '../../NavigationSearch/useMockedSearchStory';
+import { NavigationSearchProvider } from '../../navigation/NavigationSearch/NavigationSearch.const';
+import useMockedSearchStory from '../../navigation/NavigationSearch/useMockedSearchStory';
 import { desktopNavigationTheme } from './DesktopNavigationBar.const';
 import DesktopNavigationBar from './index.js';
 
 const desktopNavigationBarStory: ComponentMeta<typeof DesktopNavigationBar> = {
-  title: 'Navigation/Bar/Desktop',
+  title: 'Bars/NavigationBar',
   component: DesktopNavigationBar,
   decorators: [withRouter],
 };
@@ -25,7 +25,7 @@ const Template: ComponentStory<typeof DesktopNavigationBar> = (props) => {
   );
 };
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Desktop = Template.bind({});
+Desktop.args = {};
 
 export default desktopNavigationBarStory;
