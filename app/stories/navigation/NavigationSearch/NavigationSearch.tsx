@@ -55,12 +55,14 @@ const NavigationSearch: FC = () => {
       onChange={onSelectOptionHandler}
       inputValue={searchValue}
       options={options}
-      placeholder={LC_NS.defaultPlaceholder}
       isOptionEqualToValue={toOptionEqual}
       renderOption={renderOption}
+      fullWidth
       renderInput={(params) => (
         <TextField
           {...params}
+          size="small"
+          placeholder={LC_NS.defaultPlaceholder}
           InputProps={{
             ...params.InputProps,
             startAdornment: (

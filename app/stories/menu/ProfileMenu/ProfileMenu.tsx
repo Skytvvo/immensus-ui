@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import React, { useCallback, useState } from 'react';
-import { Avatar, Button, Divider, MenuItem } from '@mui/material';
+import { Button, Divider, MenuItem } from '@mui/material';
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import MenuWrapper from '../../wrappers/MenuWrapper';
 import { LC_PM, listOptionSx, mockedMenuOptions } from './ProfileMenu.const';
 
@@ -15,7 +16,7 @@ const ProfileMenu: FC = () => {
 
   return (
     <MenuWrapper
-      menuIcon={<Avatar />}
+      menuIcon={<AccountCircleRoundedIcon />}
       isNotificationVisible={isNotificationsInvisible}
     >
       {mockedMenuOptions.map((label) => (
