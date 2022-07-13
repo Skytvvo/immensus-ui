@@ -2,8 +2,8 @@ import type { FC } from 'react';
 import React from 'react';
 import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import { Divider, MenuItem, Stack, Typography } from '@mui/material';
-import MenuWrapper from '../../wrappers/MenuWrapper';
-import { notificationMenuMockedNotifications } from './NotificationMenu.const';
+import MenuWrapper from '@stories/wrappers/MenuWrapper';
+import { notificationMenuMockedNotifications } from '@stories/menu/NotificationMenu/NotificationMenu.const';
 
 const NotificationMenu: FC = () => {
   return (

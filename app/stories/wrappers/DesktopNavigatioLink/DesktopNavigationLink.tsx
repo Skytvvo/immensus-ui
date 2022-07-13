@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import React from 'react';
 import { NavLink } from '@remix-run/react';
 import classNames from 'classnames';
-import type { IDesktopNavigationLink } from './DesktopNavigationLink.type';
+import type { IDesktopNavigationLink } from '@stories/wrappers/DesktopNavigatioLink/DesktopNavigationLink.type';
 
 const DesktopNavigationLink: FC<IDesktopNavigationLink> = (props) => {
   const { children, route, strictRoute } = props;

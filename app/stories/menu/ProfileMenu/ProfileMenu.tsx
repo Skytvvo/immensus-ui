@@ -2,8 +2,12 @@ import type { FC } from 'react';
 import React, { useCallback, useState } from 'react';
 import { Button, Divider, MenuItem } from '@mui/material';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
-import MenuWrapper from '../../wrappers/MenuWrapper';
-import { LC_PM, listOptionSx, mockedMenuOptions } from './ProfileMenu.const';
+import MenuWrapper from '@stories/wrappers/MenuWrapper';
+import {
+  LC_PM,
+  listOptionSx,
+  mockedMenuOptions,
+} from '@stories/menu/ProfileMenu/ProfileMenu.const';
 
 const ProfileMenu: FC = () => {
   const [isNotificationsInvisible, setNotificationsInvisible] = useState(false);

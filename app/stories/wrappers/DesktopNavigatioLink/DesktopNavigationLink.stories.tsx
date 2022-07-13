@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import DesktopNavigationLink from './DesktopNavigationLink';
+import DesktopNavigationLink from '@stories/wrappers/DesktopNavigatioLink/DesktopNavigationLink';
 
 const activeRoute = '/active';
 const notActiveRoute = '/';

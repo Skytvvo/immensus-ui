@@ -11,13 +11,15 @@
     "strict": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    "baseUrl": "./app",
     "paths": {
-      "@stories": [
-        "./app/stories"
+      "@stories/*": [
+        "stories/*"
       ],
-      "@components": ["./app/components"],
-      "@constants": ["./app/constants"]
+      "@components/*": ["components/*"],
+      "@constants/*": ["globals/constants/*"],
+      "@collections/*": ["globals/collections/*"],
+      "@interfaces/*": ["globals/interfaces/*"]
     },
 
     "noEmit": true

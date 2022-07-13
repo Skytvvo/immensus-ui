@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import NotificationMenu from './NotificationMenu';
+import NotificationMenu from '@stories/menu/NotificationMenu/NotificationMenu';
 
 const NotificationMenuStory: ComponentMeta<typeof NotificationMenu> = {
   title: 'Menu/NotificationMenu',

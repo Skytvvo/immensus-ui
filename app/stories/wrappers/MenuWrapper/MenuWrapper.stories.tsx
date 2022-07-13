@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Rectangle } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
-import MenuWrapper from './MenuWrapper';
+import MenuWrapper from '@stories/wrappers/MenuWrapper/MenuWrapper';
 
 const MenuBarStory: ComponentMeta<typeof MenuWrapper> = {
   title: 'Wrappers/MenuWrapper',
