@@ -3,10 +3,13 @@ import SearchIcon from '@mui/icons-material/Search';
 import type { FC, LiHTMLAttributes, SyntheticEvent } from 'react';
 import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { debounce } from 'lodash';
-import type { AutocompleteOption } from '../../../globals/interfaces/input.type';
-import { userActionDelay } from '../../../globals/consts/asyncValues.const';
-import { LC_NS, NavigationSearchContext } from './NavigationSearch.const';
-import type { NavigationSearchContextInterface } from './NavigationSearch.type';
+import type { NavigationSearchContextInterface } from '@stories/navigation/NavigationSearch/NavigationSearch.type';
+import {
+  LC_NS,
+  NavigationSearchContext,
+} from '@stories/navigation/NavigationSearch/NavigationSearch.const';
+import type { AutocompleteOption } from '@interfaces/input.type';
+import { userActionDelay } from '@constants/asyncValues.const';
 
 const NavigationSearch: FC = () => {
   const { options, onLoadOptionsByKeyWord, onSelectOptionById, isLoading } =

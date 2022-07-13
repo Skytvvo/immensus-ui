@@ -2,10 +2,10 @@ import React from 'react';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
 import { ThemeProvider } from '@mui/material';
-import { NavigationSearchProvider } from '../../navigation/NavigationSearch/NavigationSearch.const';
-import useMockedSearchStory from '../../navigation/NavigationSearch/useMockedSearchStory';
-import { desktopNavigationTheme } from './DesktopNavigationBar.const';
-import DesktopNavigationBar from './index.js';
+import DesktopNavigationBar from '@stories/bars/DesktopNavigationBar/DesktopNavigationBar';
+import useMockedSearchStory from '@stories/navigation/NavigationSearch/useMockedSearchStory';
+import { NavigationSearchProvider } from '@stories/navigation/NavigationSearch/NavigationSearch.const';
+import { desktopNavigationTheme } from '@stories/bars/DesktopNavigationBar/DesktopNavigationBar.const';
 
 const desktopNavigationBarStory: ComponentMeta<typeof DesktopNavigationBar> = {
   title: 'Bars/NavigationBar',

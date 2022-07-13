@@ -1,4 +1,4 @@
-import type { AutocompleteOption } from '../../../globals/interfaces/input.type';
+import type { AutocompleteOption } from '@interfaces/input.type';
 
 export interface NavigationSearchContextInterface {
   options: AutocompleteOption[];

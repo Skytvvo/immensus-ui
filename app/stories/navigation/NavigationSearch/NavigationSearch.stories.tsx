@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import NavigationSearch from './NavigationSearch';
+import NavigationSearch from '@stories/navigation/NavigationSearch/NavigationSearch';
+import useMockedSearchStory from '@stories/navigation/NavigationSearch/useMockedSearchStory';
 import { NavigationSearchProvider } from './NavigationSearch.const';
-import useMockedSearchStory from './useMockedSearchStory';
 
 const NavigationSearchStory: ComponentMeta<typeof NavigationSearch> = {
   title: 'Navigation/Search',

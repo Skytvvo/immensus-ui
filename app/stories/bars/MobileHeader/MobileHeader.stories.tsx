@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
-import MobileHeader from './MobileHeader';
+import MobileHeader from '@stories/bars/MobileHeader/MobileHeader';
 
 const MobileHeaderStory: ComponentMeta<typeof MobileHeader> = {
   title: 'Bars/Header',

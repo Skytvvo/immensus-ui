@@ -1,8 +1,7 @@
 import type { FC } from 'react';
 import React, { useCallback } from 'react';
 import { Badge, IconButton, Menu } from '@mui/material';
-
-import type { IMenuBar } from './MenuWrapper.type';
+import type { IMenuBar } from '@stories/wrappers/MenuWrapper/MenuWrapper.type';
 
 const MenuWrapper: FC<IMenuBar> = (props) => {
   const { isNotificationVisible, children, menuIcon } = props;

@@ -6,12 +6,12 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import ExploreRoundedIcon from '@mui/icons-material/ExploreRounded';
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
-import NavigationSearch from '../../navigation/NavigationSearch/NavigationSearch';
-import DesktopNavigationLink from '../../wrappers/DesktopNavigatioLink';
-import { navigationRoutes } from '../../../globals/collections/navigation.enum';
-import NotificationMenu from '../../menu/NotificationMenu';
-import ProfileMenu from '../../menu/ProfileMenu';
-import { LC_DNB } from './DesktopNavigationBar.const';
+import { navigationRoutes } from '@collections/navigation.enum';
+import { LC_DNB } from '@stories/bars/DesktopNavigationBar/DesktopNavigationBar.const';
+import NavigationSearch from '@stories/navigation/NavigationSearch/NavigationSearch';
+import DesktopNavigationLink from '@stories/wrappers/DesktopNavigatioLink';
+import NotificationMenu from '@stories/menu/NotificationMenu/NotificationMenu';
+import ProfileMenu from '@stories/menu/ProfileMenu/ProfileMenu';
 
 const DesktopNavigationBar: FC = () => {
   return (

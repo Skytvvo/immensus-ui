@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { uniqueId } from 'lodash';
-import type { AutocompleteOption } from '../../../globals/interfaces/input.type';
-import { mockedResponseTime } from '../../../globals/consts/asyncValues.const';
+import type { AutocompleteOption } from '@interfaces/input.type';
+import { mockedResponseTime } from '@constants/asyncValues.const';
 
 const useMockedSearchStory = () => {
   const [options, setOptions] = useState<AutocompleteOption[]>([]);

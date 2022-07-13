@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import type { NavigationSearchContextInterface } from './NavigationSearch.type';
+import type { NavigationSearchContextInterface } from '@stories/navigation/NavigationSearch/NavigationSearch.type';
 
 export const LC_NS = {
   defaultPlaceholder: 'Search',
