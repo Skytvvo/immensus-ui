@@ -1,6 +1,6 @@
 import React from 'react';
 import type { FC } from 'react';
-import { AppBar, Button, Container, Grid, Typography } from '@mui/material';
+import { AppBar, Button, Grid, Typography } from '@mui/material';
 import { Link } from '@remix-run/react';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
@@ -16,75 +16,70 @@ import ProfileMenu from '@stories/menu/ProfileMenu/ProfileMenu';
 const DesktopNavigationBar: FC = () => {
   return (
     <AppBar position="static">
-      <Container>
+      <Grid container direction="row" alignItems="stretch" wrap="nowrap">
         <Grid
+          item
+          xs={2}
           container
-          direction="row"
+          justifyContent="stretch"
           alignItems="stretch"
-          columnSpacing={3}
-          wrap="nowrap"
+          className="rounded-r-lg bg-stone-100 p-0 hover:bg-gradient-to-r to-purple-500 from-pink-500 transition hover:text-gray-50	"
         >
-          <Grid
-            item
-            xs={2}
-            container
-            justifyContent="flex-end"
-            alignItems="center"
+          <Link
+            to={navigationRoutes.HOME}
+            className="grow flex justify-center items-center"
           >
-            <Link to={navigationRoutes.HOME}>
-              <Typography variant="h6" align="center">
-                {LC_DNB.logo}
-              </Typography>
-            </Link>
-          </Grid>
+            <Typography variant="h6" align="center" sx={{ fontWeight: 'bold' }}>
+              {LC_DNB.logo}
+            </Typography>
+          </Link>
+        </Grid>
 
-          <Grid
-            item
-            xs={6}
-            columnSpacing={3}
-            container
-            className="p-2"
-            wrap="nowrap"
-            justifyContent="space-between"
-            alignItems="stretch"
-          >
-            <Grid item xs>
-              <NavigationSearch />
-            </Grid>
-            <Grid item>
-              <Button
-                startIcon={<AddCircleIcon />}
-                variant="contained"
-                size="large"
-              >
-                <Typography noWrap>{LC_DNB.createNewPostButton}</Typography>
-              </Button>
-            </Grid>
+        <Grid
+          item
+          xs={6}
+          container
+          className="p-2"
+          wrap="nowrap"
+          justifyContent="space-around"
+          alignItems="stretch"
+        >
+          <Grid item xs={7}>
+            <NavigationSearch />
           </Grid>
-
-          <Grid item xs={4} container alignItems="stretch" wrap="nowrap">
-            <DesktopNavigationLink route={navigationRoutes.HOME}>
-              <HomeRoundedIcon />
-            </DesktopNavigationLink>
-            <DesktopNavigationLink route={navigationRoutes.EXPLORE}>
-              <ExploreRoundedIcon />
-            </DesktopNavigationLink>
-            <DesktopNavigationLink route={navigationRoutes.DIRECT}>
-              <SendRoundedIcon />
-            </DesktopNavigationLink>
-            <Grid
-              item
-              container
-              direction="row"
-              alignItems="center"
-              wrap="nowrap"
+          <Grid item>
+            <Button
+              startIcon={<AddCircleIcon />}
+              variant="contained"
+              size="large"
             >
-              <NotificationMenu />
-              <ProfileMenu />
-            </Grid>
+              <Typography noWrap>{LC_DNB.createNewPostButton}</Typography>
+            </Button>
           </Grid>
         </Grid>
-      </Container>
+
+        <Grid item xs={4} container alignItems="stretch" wrap="nowrap">
+          <DesktopNavigationLink route={navigationRoutes.HOME}>
+            <HomeRoundedIcon />
+          </DesktopNavigationLink>
+          <DesktopNavigationLink route={navigationRoutes.EXPLORE}>
+            <ExploreRoundedIcon />
+          </DesktopNavigationLink>
+          <DesktopNavigationLink route={navigationRoutes.DIRECT}>
+            <SendRoundedIcon />
+          </DesktopNavigationLink>
+          <Grid
+            item
+            container
+            direction="row"
+            alignItems="center"
+            wrap="nowrap"
+          >
+            <NotificationMenu />
+            <ProfileMenu />
+          </Grid>
+        </Grid>
+      </Grid>
     </AppBar>
   );
 };
