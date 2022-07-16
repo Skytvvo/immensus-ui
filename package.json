@@ -23,6 +23,7 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
     "@mui/styled-engine-sc": "^5.8.0",
+    "@mui/styles": "^5.9.0",
     "@mui/types": "^7.1.4",
     "@remix-run/node": "^1.6.0",
     "@remix-run/react": "^1.6.0",

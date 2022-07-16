@@ -19,7 +19,8 @@
       "@components/*": ["components/*"],
       "@constants/*": ["globals/constants/*"],
       "@collections/*": ["globals/collections/*"],
-      "@interfaces/*": ["globals/interfaces/*"]
+      "@interfaces/*": ["globals/interfaces/*"],
+      "@styles/*": ["globals/styles/*"]
     },
 
     "noEmit": true

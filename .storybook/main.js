@@ -18,6 +18,7 @@ module.exports = {
       '@collections': path.resolve(__dirname, "../app/globals/collections"),
       '@constants': path.resolve(__dirname, "../app/globals/constants"),
       '@stories': path.resolve(__dirname, "../app/stories"),
+      '@styles': path.resolve(__dirname, "../app/globals/styles"),
     };
 
     return config;

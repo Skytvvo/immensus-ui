@@ -12,6 +12,7 @@ import NavigationSearch from '@stories/navigation/NavigationSearch/NavigationSea
 import DesktopNavigationLink from '@stories/wrappers/DesktopNavigatioLink';
 import NotificationMenu from '@stories/menu/NotificationMenu/NotificationMenu';
 import ProfileMenu from '@stories/menu/ProfileMenu/ProfileMenu';
+import { colorsEnum } from '@styles/colors.enum';
 
 const DesktopNavigationBar: FC = () => {
   return (
@@ -23,7 +24,7 @@ const DesktopNavigationBar: FC = () => {
           container
           justifyContent="stretch"
           alignItems="stretch"
-          className="rounded-r-lg bg-stone-100 p-0 hover:bg-gradient-to-r to-purple-500 from-pink-500 transition hover:text-gray-50	"
+          className={`rounded-r-lg ${colorsEnum.LIGHT__SECONDARY} p-0 hover:bg-gradient-to-br ${colorsEnum.THEME_COLOR} transition hover:text-gray-50`}
         >
           <Link
             to={navigationRoutes.HOME}
